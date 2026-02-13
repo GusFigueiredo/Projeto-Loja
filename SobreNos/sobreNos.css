@@ -1,0 +1,301 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #494949;
+  font-family: "Inria Sans", sans-serif;
+}
+
+h3,
+h4 {
+  color: #494949;
+  font-weight: normal;
+}
+
+/* HEADER */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 4%;
+  background-color: #494949;
+  box-shadow: inset 0 -50px 30px -10px rgba(0, 0, 0, 0.3);
+}
+
+.colunHeader {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  /* removido flex: 1 para não afetar alinhamento */
+}
+
+.colunHeader.left {
+  justify-content: flex-start;
+  flex: 0 0 auto; /* ocupa só o tamanho da imagem */
+  margin: 0;
+  padding: 0;
+}
+
+.imgHeader {
+  max-width: 300px;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.colunHeader.right {
+  justify-content: flex-end;
+  gap: 30px;
+  flex: 1 1 auto; /* ocupa o espaço restante */
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+}
+
+.buttonNav {
+  font-size: 1rem;
+  padding: 10px;
+  margin: 0 10px;
+  border: none;
+  background-color: transparent;
+  transition: 0.3s;
+  color: #dbdbdb;
+  cursor: pointer;
+}
+
+.buttonNav:hover {
+  transform: scale(1.05);
+  background-color: #dc853d;
+  color: #2c2c2c;
+}
+
+.aHeader {
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+}
+
+.listraDiv {
+  padding: 12.5px;
+  flex: 1;
+  text-align: center;
+  background-color: #eeeeee;
+  box-shadow: 0 0px 30px 10px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+/* MAIN */
+
+main {
+  background-color: #dbdbdb;
+}
+
+.sectionSobre {
+  padding-top: 20px;
+  text-align: center;
+  background-image: url("https://images.usadosbr.com/media/advertiser/images/000/072/268/crop/auto-mania-feira-de-santana-8905.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.8);
+  background-blend-mode: multiply;
+}
+
+.sectionSobre h3 {
+  padding: 20px;
+  color: #dbdbdb;
+}
+
+.imgCarro {
+  transform: scaleX(-1);
+  width: 28%;
+  max-width: 300px;
+  height: auto;
+  position: relative;
+  animation: carroGo 3s forwards;
+}
+
+@keyframes carroGo {
+  from {
+    left: 100vw;
+    position: relative;
+  }
+  to {
+    left: 0;
+    position: relative;
+  }
+}
+
+.divMain {
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  background-color: #dc853d;
+  box-shadow: 0 10px 30px 10px rgba(0, 0, 0, 0.3);
+  gap: 20px;
+}
+
+.divMain h3 {
+  color: #494949;
+  text-align: center;
+}
+
+.sectionLocaliza {
+  background-color: #eeeeee;
+  text-align: center;
+  padding: 25px;
+}
+
+.sectionLocaliza h3,
+.sectionLocaliza h4 {
+  padding: 10px;
+}
+
+.containerLocaliza {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.colunMain {
+  flex: 1 1 300px;
+  max-width: 500px;
+  text-align: center;
+}
+
+/* FOOTER */
+
+footer {
+  list-style: none;
+  padding: 35px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #494949;
+  gap: 20px;
+}
+
+footer ul {
+  color: #dbdbdb;
+  font-size: 1rem;
+}
+
+footer h3 {
+  color: #dbdbdb;
+  font-size: 1.5rem;
+}
+
+footer h4 {
+  color: #dbdbdb;
+  font-size: 1rem;
+}
+
+.colunFooter {
+  flex: 1 1 250px;
+  padding: 10px;
+  text-align: center;
+}
+
+.listraFooter {
+  margin: 10px auto;
+  height: 1.8px;
+  width: 15rem;
+  background-color: #dbdbdb;
+}
+
+.imgFooter {
+  margin-top: -10px;
+  width: 180px;
+  height: auto;
+  max-width: 100%;
+}
+
+.iconFooter {
+  color: #dbdbdb;
+  padding: 0 5px;
+  font-size: 30px;
+  transition: 0.3s;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .colunHeader.left,
+  .colunHeader.right {
+    justify-content: center;
+    flex: none;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .imgHeader {
+    width: 80%;
+    max-width: 240px;
+    padding: 10px 0;
+  }
+
+  .buttonNav {
+    margin: 10px 5px;
+    font-size: 0.95rem;
+  }
+
+  .divMain {
+    flex-direction: column;
+    padding: 20px 10px;
+  }
+
+  .imgCarro {
+    width: 80%;
+    max-width: 280px;
+  }
+
+  .sectionSobre h3 {
+    font-size: 1.2rem;
+  }
+
+  .sectionLocaliza h3,
+  .sectionLocaliza h4 {
+    font-size: 1rem;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 10px;
+  }
+
+  .colunFooter {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .listraFooter {
+    width: 80%;
+  }
+
+  .imgFooter {
+    width: 150px;
+  }
+
+  .iconFooter {
+    font-size: 25px;
+  }
+}
