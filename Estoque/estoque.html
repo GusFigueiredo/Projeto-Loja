@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estoque</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="https://automaniaautomoveis.com.br/sites/automaniaautomoveis.com.br/img/img-og.png"
+      type="image/x-icon"
+    />
+
+    <link rel="stylesheet" href="Estoque/estoque.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <section class="colunHeader left">
+        <img
+          class="imgHeader"
+          src="https://automaniaautomoveis.com.br/sites/automaniaautomoveis.com.br/img/logo.png"
+          alt=""
+        />
+      </section>
+
+      <section class="colunHeader right">
+        <button class="buttonNav">
+          <a class="aHeader" href="../">HOME</a>
+        </button>
+        <button class="buttonNav">
+          <a class="aHeader" href="../Estoque/estoque.html">ESTOQUE</a>
+        </button>
+        <button class="buttonNav">
+          <a class="aHeader" href="../SobreNos/sobreNos.html">SOBRE NOS</a>
+        </button>
+        <button class="buttonNav">
+          <a class="aHeader" href="../Contato/contato.html">CONTATO</a>
+        </button>
+      </section>
+    </header>
+    <div class="listraDiv"></div>
+    <main>
+      <button id="abrirFiltro" class="btnFiltroMobile">☰ Filtros</button>
+
+      <aside class="filtroMobile" id="filtroMobile">
+        <button id="fecharFiltro" class="btnFechar">X</button>
+        <h2>FILTROS</h2>
+        <div class="divPreco">
+          <h3>PREÇO</h3>
+          <p class="pFiltro" onclick="ordenarPor('preco', 'desc')">
+            Maior preço
+          </p>
+          <p class="pFiltro" onclick="ordenarPor('preco', 'asc')">
+            Menor preço
+          </p>
+          <div class="divInput">
+            <input type="number" id="precoMin" placeholder="Mínimo" />
+            <p>a</p>
+            <input type="number" id="precoMax" placeholder="Máximo" />
+
+            <button class="buttonFiltro" onclick="filtrarPorPreco()">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="divAno">
+          <h3>ANO</h3>
+          <p class="pFiltro" onclick="ordenarPor('ano', 'desc')">Maior ano</p>
+          <p class="pFiltro" onclick="ordenarPor('ano', 'asc')">Menor ano</p>
+        </div>
+
+        <div class="divKm">
+          <h3>Quilometragem</h3>
+          <p class="pFiltro" onclick="ordenarPor('km', 'desc')">
+            Maior quilometragem
+          </p>
+          <p class="pFiltro" onclick="ordenarPor('km', 'asc')">
+            Menor quilometragem
+          </p>
+          <div class="divInput">
+            <input type="number" id="kmMin" placeholder="Mínimo" />
+            <p>a</p>
+            <input type="number" id="kmMax" placeholder="Máximo" />
+            <button class="buttonFiltro" onclick="filtrarPorKm()">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </aside>
+      <div class="container">
+        <section class="sectionFiltro">
+          <h2>FILTROS</h2>
+          <div class="divPreco">
+            <h3>PREÇO</h3>
+            <p class="pFiltro" onclick="ordenarPor('preco', 'desc')">
+              Maior preço
+            </p>
+            <p class="pFiltro" onclick="ordenarPor('preco', 'asc')">
+              Menor preço
+            </p>
+            <div class="divInput">
+              <input type="number" id="precoMin" placeholder="Mínimo" />
+              <p>a</p>
+              <input type="number" id="precoMax" placeholder="Máximo" />
+
+              <button class="buttonFiltro" onclick="filtrarPorPreco()">
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="divAno">
+            <h3>ANO</h3>
+            <p class="pFiltro" onclick="ordenarPor('ano', 'desc')">Maior ano</p>
+            <p class="pFiltro" onclick="ordenarPor('ano', 'asc')">Menor ano</p>
+          </div>
+
+          <div class="divKm">
+            <h3>Quilometragem</h3>
+            <p class="pFiltro" onclick="ordenarPor('km', 'desc')">
+              Maior quilometragem
+            </p>
+            <p class="pFiltro" onclick="ordenarPor('km', 'asc')">
+              Menor quilometragem
+            </p>
+            <div class="divInput">
+              <input type="number" id="kmMin" placeholder="Mínimo" />
+              <p>a</p>
+              <input type="number" id="kmMax" placeholder="Máximo" />
+              <button class="buttonFiltro" onclick="filtrarPorKm()">
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="sectionCard">
+          <div
+            class="cardMain"
+            data-preco="412190"
+            data-ano="2025"
+            data-km="20000"
+          >
+            <a href="http://">
+              <div class="conteudoCard">
+                <img
+                  class="imgCarroCard"
+                  src="https://cdn.diariodolitoral.com.br/upload/dn_arquivo/2023/04/fiat-mobi-trekking.jpg"
+                  alt="TOYOTA SW4 2025"
+                />
+                <div class="infoCard">
+                  <h2>TOYOTA SW4 2025</h2>
+                  <p>GASOLINA - 20.000 KM</p>
+                  <h3 class="precoCard">R$412.190,00</h3>
+                  <button class="btnDetalhes">MAIS DETALHES</button>
+                </div>
+              </div>
+              <div class="listraCard"></div>
+            </a>
+          </div>
+
+          <div
+            class="cardMain"
+            data-preco="500100"
+            data-ano="2024"
+            data-km="10000"
+          >
+            <a href="http://">
+              <div class="conteudoCard">
+                <img
+                  class="imgCarroCard"
+                  src="https://cdn.diariodolitoral.com.br/upload/dn_arquivo/2023/04/fiat-mobi-trekking.jpg"
+                  alt="TOYOTA SW4 2025"
+                />
+                <div class="infoCard">
+                  <h2>TOYOTA SW4 2024</h2>
+                  <p>GASOLINA - 10.000 KM</p>
+                  <h3 class="precoCard">R$500.100,00</h3>
+                  <button class="btnDetalhes">MAIS DETALHES</button>
+                </div>
+              </div>
+              <div class="listraCard"></div>
+            </a>
+          </div>
+
+          <div
+            class="cardMain"
+            data-preco="200000"
+            data-ano="2023"
+            data-km="50000"
+          >
+            <a href="http://">
+              <div class="conteudoCard">
+                <img
+                  class="imgCarroCard"
+                  src="https://cdn.diariodolitoral.com.br/upload/dn_arquivo/2023/04/fiat-mobi-trekking.jpg"
+                  alt="TOYOTA SW4 2025"
+                />
+                <div class="infoCard">
+                  <h2>TOYOTA SW4 2023</h2>
+                  <p>GASOLINA - 50.000 KM</p>
+                  <h3 class="precoCard">R$200.100,00</h3>
+                  <button class="btnDetalhes">MAIS DETALHES</button>
+                </div>
+              </div>
+              <div class="listraCard"></div>
+            </a>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="colunFooter">
+        <h3>Contato</h3>
+        <div class="listraFooter"></div>
+        <ul class="ulNumeros" style="list-style: none">
+          <li><i class="fas fa-phone"></i> (11) 4508-2170</li>
+          <li><i class="fa-brands fa-square-whatsapp"></i> (11) 4508-2170</li>
+        </ul>
+      </div>
+
+      <div class="colunFooter">
+        <h3>Endereco</h3>
+        <div class="listraFooter"></div>
+        <h4>Av. Luiz Dumont Villares, 1689</h4>
+        <h4>Parada Inglesa - São Paulo/SP</h4>
+        <h4>CEP 02239-000</h4>
+      </div>
+
+      <div class="colunFooter">
+        <img
+          class="imgFooter"
+          src="https://automaniaautomoveis.com.br/sites/automaniaautomoveis.com.br/img/logo.png"
+          alt=""
+        />
+        <div class="listraFooter"></div>
+        <a class="iconFooter" href="http://"
+          ><i class="fa-brands fa-square-instagram"></i
+        ></a>
+        <a class="iconFooter" href="http://"
+          ><i class="fa-brands fa-square-facebook"></i
+        ></a>
+      </div>
+
+      <div class="colunFooter">
+        <h3>Atendimento</h3>
+        <div class="listraFooter"></div>
+        <h4>Segunda à sexta: 9:00 às 19:00</h4>
+        <h4>Sábados: 10:00 às 14:00</h4>
+      </div>
+    </footer>
+    <script src="/Estoque/estoque.js"></script>
+  </body>
+</html>

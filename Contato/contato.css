@@ -1,0 +1,314 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h2,
+h3,
+h4 {
+  color: #494949;
+  font-weight: normal;
+}
+
+body {
+  background-color: #494949;
+  font-family: "Inria Sans", sans-serif;
+}
+
+/* HEADER */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px 4%;
+  background-color: #494949;
+  box-shadow: inset 0 -50px 30px -10px rgba(0, 0, 0, 0.3);
+}
+
+.colunHeader {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.colunHeader.left {
+  justify-content: flex-start;
+  flex: 1;
+}
+
+.colunHeader.right {
+  justify-content: flex-end;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.imgHeader {
+  max-width: 300px;
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.buttonNav {
+  font-size: 1rem;
+  padding: 10px;
+  margin: 0 10px;
+  border: none;
+  background-color: transparent;
+  transition: 0.3s;
+}
+
+.buttonNav:hover {
+  transform: scale(1.05);
+  background-color: #dc853d;
+}
+
+.aHeader {
+  color: #dbdbdb;
+  outline: none;
+  text-decoration: none;
+}
+
+.listraDiv {
+  padding: 12.5px;
+  flex: 1;
+  text-align: center;
+  background-color: #eeeeee;
+  box-shadow: 0 0px 30px 10px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+/* MAIN */
+
+main {
+  background-color: #dbdbdb;
+  padding: 50px;
+}
+
+.contatoContainer {
+  padding: 20px;
+}
+
+.tituloContato {
+  text-align: center;
+  margin-top: -40px;
+  margin-bottom: 50px;
+}
+
+.conteudoContato {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.textoContato {
+  flex: 1;
+  min-width: 250px;
+}
+
+.formContato {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 280px;
+}
+
+.formContato input,
+.formContato textarea,
+.formContato button {
+  padding: 10px;
+  font-weight: normal;
+  height: 50px;
+  width: 100%;
+  max-width: 400px;
+  border-style: double;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.formContato textarea {
+  height: 100px;
+  resize: none;
+}
+
+.formContato button {
+  height: 45px;
+  font-size: 1.1rem;
+  background-color: orange;
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+
+/* Campo de DDD + Telefone */
+.grupoTelefone {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+.grupoTelefone input {
+  padding: 10px;
+  font-weight: normal;
+  height: 50px;
+  border-style: double;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+input.ddd {
+  width: 3.5rem;
+}
+
+input.telefone {
+  flex: 1;
+}
+
+/* Botão principal */
+
+.buttonEnviar {
+  text-align: center;
+  border-radius: 5px;
+  color: #2c2c2c;
+  font-size: 25px;
+  background-color: #dc853d;
+  border: 0;
+  padding: 5px;
+  height: 5rem;
+  width: 100%;
+  max-width: 450px;
+  transition: 0.3s;
+}
+
+.buttonEnviar:hover {
+  color: #dc853d;
+  background-color: #2c2c2c;
+  transform: scale(1.02);
+}
+
+/* FOOTER */
+
+footer {
+  list-style: none;
+  padding: 35px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #494949;
+  gap: 20px;
+}
+
+footer ul {
+  color: #dbdbdb;
+  font-size: 1rem;
+}
+
+footer h3 {
+  color: #dbdbdb;
+  font-size: 1.5rem;
+}
+
+footer h4 {
+  color: #dbdbdb;
+  font-size: 1rem;
+}
+
+.colunFooter {
+  flex: 1 1 250px;
+  padding: 10px;
+  text-align: center;
+}
+
+.listraFooter {
+  margin: 10px auto;
+  height: 1.8px;
+  width: 15rem;
+  background-color: #dbdbdb;
+}
+
+.imgFooter {
+  margin-top: -10px;
+  width: 180px;
+  height: auto;
+  max-width: 100%;
+}
+
+.iconFooter {
+  color: #dbdbdb;
+  padding: 0 5px;
+  font-size: 30px;
+  transition: 0.3s;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 20px 10px;
+    text-align: center;
+  }
+
+  .colunHeader.left,
+  .colunHeader.right {
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .imgHeader {
+    width: 80%;
+    max-width: 240px;
+    padding: 10px 0;
+  }
+
+  .buttonNav {
+    margin: 10px 5px;
+    font-size: 0.95rem;
+  }
+
+  .conteudoContato {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .formContato {
+    width: 100%;
+  }
+
+  .grupoTelefone {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .buttonEnviar {
+    width: 90%;
+    max-width: 100%;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 10px;
+  }
+
+  .colunFooter {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .listraFooter {
+    width: 80%;
+  }
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contato</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="https://automaniaautomoveis.com.br/sites/automaniaautomoveis.com.br/img/img-og.png"
+      type="image/x-icon"
+    />
+
+    <link rel="stylesheet" href="Contato/contato.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <script>
+      function alert {
+        alert("Mensagem enviada com sucesso!");
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <section class="colunHeader left">
+        <img
+          class="imgHeader"
+          src="https://automaniaautomoveis.com.br/sites/automaniaautomoveis.com.br/img/logo.png"
+          alt=""
+        />
+      </section>
+
+      <section class="colunHeader right">
+        <button class="buttonNav">
+          <a class="aHeader" href="../">HOME</a>
+        </button>
+        <button class="buttonNav">
+          <a class="aHeader" href="../Estoque/estoque.html">ESTOQUE</a>
+        </button>
+        <button class="buttonNav">
+          <a class="aHeader" href="../SobreNos/sobreNos.html">SOBRE NOS</a>
+        </button>
+        <button class="buttonNav">
+          <a class="aHeader" href="../Contato/contato.html">CONTATO</a>
+        </button>
+      </section>
+    </header>
+    <div class="listraDiv"></div>
+
+    <main>
+      <section class="contatoContainer">
+        <h3 class="tituloContato">
+          Entre em contato com a Auto Mania Automóveis.
+        </h3>
+
+        <div class="conteudoContato">
+          <div class="textoContato">
+            <h2>
+              Fique à vontade para entrar em contato.<br />
+              <br />
+              Nossa equipe está pronta para tirar suas dúvidas, <br />
+              oferecer as melhores condições e ajudar você a <br />
+              encontrar o carro ideal. Seja para agendar uma visita, <br />
+              solicitar uma simulação ou obter mais informações sobre <br />
+              nossos veículos, estamos à disposição por telefone, <br />
+              WhatsApp ou presencialmente.
+            </h2>
+          </div>
+
+          <form class="formContato">
+            <input type="text" placeholder="NOME" />
+            <input type="email" placeholder="EMAIL" />
+            <div class="grupoTelefone">
+              <input type="text" class="ddd" maxlength="3" placeholder="DDD" />
+              <input
+                type="text"
+                class="telefone"
+                maxlength="9"
+                placeholder="Telefone"
+              />
+            </div>
+            <textarea placeholder="Digite sua mensagem..."></textarea>
+            <button class="buttonEnviar" onclick="alert()" type="submit">
+              ENVIAR
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="colunFooter">
+        <h3>Contato</h3>
+        <div class="listraFooter"></div>
+        <ul class="ulNumeros" style="list-style: none">
+          <li><i class="fas fa-phone"></i> (11) 4508-2170</li>
+          <li><i class="fa-brands fa-square-whatsapp"></i> (11) 4508-2170</li>
+        </ul>
+      </div>
+
+      <div class="colunFooter">
+        <h3>Endereco</h3>
+        <div class="listraFooter"></div>
+        <h4>Av. Luiz Dumont Villares, 1689</h4>
+        <h4>Parada Inglesa - São Paulo/SP</h4>
+        <h4>CEP 02239-000</h4>
+      </div>
+
+      <div class="colunFooter">
+        <img
+          class="imgFooter"
+          src="https://automaniaautomoveis.com.br/sites/automaniaautomoveis.com.br/img/logo.png"
+          alt=""
+        />
+        <div class="listraFooter"></div>
+        <a class="iconFooter" href="http://"
+          ><i class="fa-brands fa-square-instagram"></i
+        ></a>
+        <a class="iconFooter" href="http://"
+          ><i class="fa-brands fa-square-facebook"></i
+        ></a>
+      </div>
+
+      <div class="colunFooter">
+        <h3>Atendimento</h3>
+        <div class="listraFooter"></div>
+        <h4>Segunda à sexta: 9:00 às 19:00</h4>
+        <h4>Sábados: 10:00 às 14:00</h4>
+      </div>
+    </footer>
+  </body>
+</html>
